@@ -12,7 +12,7 @@
         let array = n.toString().split('');
         let newArray = [];
         for (let i = 0; i < array.length; i++){
-            newArray.push(array[i] * array[i] * array[i]);
+            newArray.push(Math.pow(array[i], array.length));
             }
             if (n === newArray.reduce((a, b) => a + b, 0)){
                 return true;
@@ -20,7 +20,7 @@
                 return false;
             }
         }
-        console.log(isNarcissistic(153));
+        console.log(isNarcissistic(8208));
     </script>
 </body>
 </html>
