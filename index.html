@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function isNarcissistic(n){
+        let array = n.toString().split('');
+        let newArray = [];
+        for (let i = 0; i < array.length; i++){
+            newArray.push(array[i] * array[i] * array[i]);
+            }
+            if (n === newArray.reduce((a, b) => a + b, 0)){
+                return true;
+            }else{
+                return false;
+            }
+        }
+        console.log(isNarcissistic(153));
+    </script>
+</body>
+</html>
